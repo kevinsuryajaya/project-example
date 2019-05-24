@@ -4,10 +4,9 @@ import Navigation from './navbar';
 
 class Layout extends Component{
 render(){
-    return(
-            
+    return(        
         <Navigation/>
-            
+        
         
        )
 }
