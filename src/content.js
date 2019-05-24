@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Container,Row,Col,Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+
 
 class Content extends Component{
     constructor(props){
@@ -21,19 +22,15 @@ class Content extends Component{
         isShow ? <h1>{text}</h1>:null;
 
         return(
-            <Container>
-                <Row>
-
-                    <Col md={6}>
+            <div>
                     <Greeting text={text} isShow={this.state.isShow}/>
                     <Button onClick={this.toggleShow} type="button">
                         Click Me!
                     </Button>
-                    </Col>
-                    
-                  
-                </Row>
-            </Container>
+            </div>
+                   
+                   
+                 
         );
     }
 }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Container,Row} from 'react-bootstrap';
+
+
 function formatDate(date){
     return date.toLocaleDateString();
 }
@@ -25,18 +26,14 @@ function UserInfo(props){
 
 export const Comment = (props) =>{
     return(
-        <Container>
-            <br></br>
-            <Row>
             <div className="Comment">
-            <UserInfo user={props.author}/>
-            <div className="Comment-text">{props.text}</div>
-            <div className="Comment-date">
-            {formatDate(props.date)}
+                <UserInfo user={props.author}/>
+                    <div className="Comment-text">{props.text}</div>
+                    <div className="Comment-date">
+                    {formatDate(props.date)}
+                    </div>
             </div>
-        </div>
-            </Row>
-        </Container>
+           
         
     );
 }
@@ -46,6 +43,6 @@ export const comment = {
     text: 'testing',
     author: {
         name: 'Kevin',
-        avatarUrl: 'https://placekitten.com/g/64/64',
+        avatarUrl: 'http://www.keralagiftdelivery.com/images/gifts/G20101.jpg',
     },
 }
