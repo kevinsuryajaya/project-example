@@ -1,41 +1,33 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-
+import React, { Component } from 'react'
+import { Button } from 'react-bootstrap'
 
 class Content extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props)
 
-		this.state = {
-			isShow: false,
-		};
-	}
+    this.state = {
+      isShow: false,
+    }
+  }
 
-	toggleShow = () => {
-		this.setState(state => ({ isShow: !state.isShow }));
-	};
+  toggleShow = () => {
+    this.setState(state => ({ isShow: !state.isShow }))
+  }
 
-	render() {
-		const text = 'Hello World';
+  render() {
+    const text = 'Hello World'
 
-		const Greeting = ({ text, isShow }) =>
-			isShow ? <h1>{text}</h1> : null;
+    const Greeting = ({ text, isShow }) => (isShow ? <h1>{text}</h1> : null)
 
-		return (
-			<div>
-				<Greeting text={text} isShow={this.state.isShow} />
-				<Button onClick={this.toggleShow} type="button">
-					Click Me!
+    return (
+      <div>
+        <Greeting text={text} isShow={this.state.isShow} />
+        <Button onClick={this.toggleShow} type="button">
+          Click Me!
         </Button>
-			</div>
-
-
-
-		);
-	}
+      </div>
+    )
+  }
 }
-
-
-
 
 export default Content

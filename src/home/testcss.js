@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './button.css';
+import React, { Component } from 'react'
+import './button.css'
 
 class Application extends Component {
   render() {
@@ -12,4 +12,4 @@ class Application extends Component {
   }
 }
 
-export default Application;
+export default Application

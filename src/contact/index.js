@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 
 class Contact extends Component {
@@ -7,8 +7,8 @@ class Contact extends Component {
       <Container>
         <h2>Contact</h2>
       </Container>
-    );
+    )
   }
 }
 
-export default Contact;
+export default Contact

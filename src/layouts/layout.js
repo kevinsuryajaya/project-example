@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import Navigation from './navbar';
-
+import React, { Component } from 'react'
+import Navigation from './navbar'
 
 class Layout extends Component {
-	render() {
-		return (
-			<Navigation />
-		)
-	}
+  render() {
+    return <Navigation />
+  }
 }
 
-export default Layout;
+export default Layout
