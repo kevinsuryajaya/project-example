@@ -1,36 +1,16 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 
-class Counter extends Component {
-  constructor(props) {
-    super(props)
+function Counter() {
+  const [count, setCount] = useState(0)
 
-    this.state = {
-      value: 0,
-    }
-  }
-
-  minus = () => {
-    let currentValue = this.state.value
-
-    this.setState({ value: currentValue - 1 })
-  }
-
-  plus = () => {
-    let currentValue = this.state.value
-
-    this.setState({ value: currentValue + 1 })
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Counter: {this.state.value}</p>
-        <Button onClick={this.minus}>-</Button>
-        <Button onClick={this.plus}>+</Button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <p>Counter: {count}</p>
+      <Button onClick={() => setCount(count - 1)}>-</Button>
+      <Button onClick={() => setCount(count + 1)}>+</Button>
+    </div>
+  )
 }
 
 export default Counter
