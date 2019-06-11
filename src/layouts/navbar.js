@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from '../home/index'
 import About from '../about/index'
 import Contact from '../contact/index'
+import App from '../Modal/index'
 import './nav.css'
 
 class Navigation extends Component {
@@ -28,6 +29,11 @@ class Navigation extends Component {
                 Contact
               </Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to={'/Modal'} className="link">
+                Modal
+              </Link>
+            </Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -38,6 +44,7 @@ class Navigation extends Component {
           <Route exact path="/home" component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
+          <Route path="/Modal" component={App} />
         </Switch>
       </Router>
     )
