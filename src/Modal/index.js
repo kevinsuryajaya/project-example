@@ -1,34 +1,42 @@
 import React from 'react'
 import { Button, Modal } from 'react-bootstrap'
+import ContentA from './contentA'
+import ContentB from './contentB'
 
-function SaveButton({ setShow, show }) {
+function ContentButtonA({ setContent, content }) {
   return (
-    <Button variant="primary" onClick={() => setShow(!show)}>
-      Save Changes
+    <Button
+      variant="primary"
+      onClick={() => setContent((content = <ContentA />))}
+    >
+      Content A
     </Button>
   )
 }
 
-function CloseButton({ setShow, show }) {
+function ContentButtonB({ setContent, content }) {
   return (
-    <Button variant="secondary" onClick={() => setShow(!show)}>
-      Close
+    <Button
+      variant="primary"
+      onClick={() => setContent((content = <ContentB />))}
+    >
+      Content B
     </Button>
   )
 }
 
-function ModalFooter({ setShow, show }) {
+function ModalFooter({ setContent, content }) {
   return (
     <Modal.Footer>
-      <CloseButton setShow={setShow} show={show} />
+      <ContentButtonA setContent={setContent} content={content} />
 
-      <SaveButton setShow={setShow} show={show} />
+      <ContentButtonB setContent={setContent} content={content} />
     </Modal.Footer>
   )
 }
 
-function ModalBody() {
-  return <Modal.Body>Testing Modal</Modal.Body>
+function ModalBody({ content }) {
+  return <Modal.Body>{content}</Modal.Body>
 }
 
 function ModalHeader() {
@@ -40,13 +48,15 @@ function ModalHeader() {
 }
 
 function AppModal({ setShow, show }) {
+  const [content, setContent] = React.useState('Testing Content')
+
   return (
     <Modal show={show} onHide={() => setShow(!show)}>
       <ModalHeader />
 
-      <ModalBody />
+      <ModalBody content={content} />
 
-      <ModalFooter setShow={setShow} show={show} />
+      <ModalFooter setContent={setContent} content={content} />
     </Modal>
   )
 }
@@ -61,6 +71,7 @@ function AppButton({ setShow, show }) {
 
 function App() {
   const [show, setShow] = React.useState(false)
+
   return (
     <>
       <AppButton setShow={setShow} show={show} />
