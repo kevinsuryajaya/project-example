@@ -5,6 +5,7 @@ import Home from '../home/index'
 import About from '../about/index'
 import Contact from '../contact/index'
 import App from '../Modal/index'
+import Nested from '../NestedModal/index'
 import './nav.css'
 
 class Navigation extends Component {
@@ -34,6 +35,11 @@ class Navigation extends Component {
                 Modal
               </Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to={'/NestedModal'} className="link">
+                Nested Modal
+              </Link>
+            </Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -45,6 +51,7 @@ class Navigation extends Component {
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
           <Route path="/Modal" component={App} />
+          <Route path="/NestedModal" component={Nested} />
         </Switch>
       </Router>
     )
