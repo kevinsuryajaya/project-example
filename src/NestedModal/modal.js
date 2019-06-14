@@ -114,4 +114,4 @@ const CustomModal = props => {
   )
 }
 
-export default CustomModal;
+export default CustomModal

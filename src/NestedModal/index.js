@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button} from 'reactstrap'
+import { Button } from 'reactstrap'
 import ContentRegister from './ContentRegister'
 import ContentA from '../Modal/contentA'
 import CustomModal from './modal'
