@@ -6,14 +6,21 @@ import About from '../about/index'
 import Contact from '../contact/index'
 import App from '../Modal/index'
 import Nested from '../NestedModal/index'
+import styled from 'styled-components'
 import './nav.css'
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
 class Navigation extends Component {
   render() {
     return (
       <Router>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">Example React</Navbar.Brand>
+          <Navbar.Brand href="#home"><Title>Example React</Title></Navbar.Brand>
           <Nav className="mr-auto">
             <Nav.Link>
               <Link to={'/home'} className="link">

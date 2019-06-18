@@ -11,13 +11,15 @@
     "react-scripts": "3.0.1",
     "reactjs-popup": "^1.4.1",
     "reactn": "^2.1.4",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "styled-components": "^4.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +37,9 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^1.6.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "flow-bin": "^0.101.0"
   }
 }

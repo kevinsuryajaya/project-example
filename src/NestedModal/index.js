@@ -1,8 +1,11 @@
+// @flow
+
 import React from 'react'
 import { Button } from 'reactstrap'
 import ContentRegister from './ContentRegister'
 import ContentA from '../Modal/contentA'
 import CustomModal from './modal'
+
 
 const CustomButtonContent = props => {
   const { color, click, label, toggleContent, content } = props
